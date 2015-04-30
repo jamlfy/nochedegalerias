@@ -2,18 +2,29 @@
 	<Window title="Noche de Galerias">
 		<!-- android menu -->
 		<Menu platform="android">
-			<MenuItem title="Refresh" icon="/refresh_icon.png" onClick="refreshCal"/>
+			<MenuItem id="past" />
+			<MenuItem id="now" />
+			<MenuItem id="future" />
+			<MenuItem id="feed" />
 		</Menu>
 
-		<!-- rightNavButton for platforms that support them -->
+		<!-- rightNavButton for platforms that support them onClick="openDialog" -->
 		<RightNavButton platform="ios,mobileweb">
-			<Button id="refreshButton" onClick="refreshCal"/>
+			<Button id="refreshButton"  />
 		</RightNavButton>
+		<OptionDialog id="menus" destructive="3" cancel="2" platform="ios,mobileweb">
+			<Options>
+				<Option>option 1</Option>
+				<Option>option 2</Option>
+				<Option>cancel</Option>
+				<Option>destructive</Option>
+			</Options>
+		</OptionDialog>
 
 		<!-- tableview representing all master rows -->
 		<TableView id="table" onClick="openDetail">
 			<HeaderView platform="android">
-				<Label id="header">RSS Reader</Label>
+				<Label id="header">Las exposiciones</Label>
 			</HeaderView>
 		</TableView>
 	</Window>

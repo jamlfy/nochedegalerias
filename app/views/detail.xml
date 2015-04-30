@@ -1,5 +1,18 @@
 <Alloy>
 	<Window>
+		<Menu platform="android">
+			<MenuItem id="share" />
+			<MenuItem id="geo" />
+		</Menu>
+
+		<RightNavButton platform="ios,mobileweb">
+			<Button id="refreshButton" onClick="geo()" />
+		</RightNavButton>
+
 		<Label id="date"/>
+		<Label id="title"/>
+		<Label id="local"/>
+
+		<Widget src="com.alcoapps.viewmarkdown" id="text"/>
 	</Window>
 </Alloy>

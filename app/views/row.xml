@@ -1,6 +1,12 @@
 <Alloy>
 	<TableViewRow>
-		<Label id="date"/>
-		<Label id="title"/>
+		<View id="lintro">
+			<Label id="date"/>
+			<Label id="times"/>
+		</View>
+		<View id="lmax">
+			<Label id="title"/>
+			<Label id="local"/>
+		</View>
 	</TableViewRow>
 </Alloy>

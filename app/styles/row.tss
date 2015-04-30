@@ -1,0 +1,53 @@
+
+"#row": {
+	height: '70dp',
+    className: 'itemRow',
+    hasChild: true
+} 
+
+"#lintro": {
+    height: '65dp',
+    width: '68dp',
+    left: '5dp',
+    top: '3dp',
+    touchEnabled: false
+}
+
+"#lmax": {
+    top: '-10dp',
+    height: '70dp',
+    left: '83dp',
+    right: '3dp',
+    touchEnabled: false,
+    textAlign: 'left'
+}
+
+"#date": {
+    font: {
+        fontSize: '20dp'
+    },
+    textAlign: 'center'
+}
+
+"#times": {
+    bottom: '30dp',
+    font: {
+        fontSize: '14dp'
+    },
+    textAlign: 'center'
+}
+
+"#title": {
+    font: {
+        fontSize: '14dp'
+    },
+    textAlign: 'left'
+}
+
+"#local": {
+    bottom: '3dp',
+    font: {
+        fontSize: '12dp'
+    },
+    textAlign: 'left'
+}

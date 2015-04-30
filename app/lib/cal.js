@@ -11,7 +11,7 @@ var t = 0,
 		var IS = now.startOf(Alloy.CFG.TIME),
 			FS = now.endOf(Alloy.CFG.TIME);
 
-		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?start[$lte]=' + IS.toJSON() + '&end[$gte]=' + FS.toJSON();
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?end[$lte]=' + FS.toJSON(); //+ '&start[$lte]=' + IS.toJSON();
 	},
 	future : function () {
 		var FS = now.endOf(Alloy.CFG.TIME);
@@ -27,6 +27,8 @@ exports.load = function(name, callback) {
 		got =  runs[name] || runs.id ;
 
 	xhr.open('GET', got(name));
+	xhr.setRequestHeader('X-Titanium-ID', Titanium.userAgent + ' '+ Ti.getVersion());
+	
 	xhr.onload = function(e) {
 		var xml = this.responseText;
 
