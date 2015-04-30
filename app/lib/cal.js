@@ -3,16 +3,22 @@ var t = 0,
 	now = moment(),
 	runs = {
 	now : function () {
-		return URI + NAME + '?start=' + id
+		var IS = now.startOf(Alloy.CFG.TIME),
+			FS = now.endOf(Alloy.CFG.TIME);
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?start[$gte]=' + IS.toJSON() + '&start[$lte]=' + FS.toJSON();
 	},
 	past : function () {
-		return URI + NAME + '?start=' + id
+		var IS = now.startOf(Alloy.CFG.TIME),
+			FS = now.endOf(Alloy.CFG.TIME);
+
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?start[$lte]=' + IS.toJSON() + '&end[$gte]=' + FS.toJSON();
 	},
 	future : function () {
-		return URI + NAME + '?start=' + id
+		var FS = now.endOf(Alloy.CFG.TIME);
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?start[$gte]=' + FS.toJSON();
 	},
 	id : function (id) {
-		return URI + NAME + '/' + id
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/' + id;
 	}
 };
 
