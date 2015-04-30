@@ -30,7 +30,7 @@
 }
 
 "#times": {
-    bottom: '10dp',
+    bottom: '5dp',
     font: {
         fontSize: '14dp'
     },
