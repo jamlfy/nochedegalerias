@@ -1,0 +1,6 @@
+<Alloy>
+	<TableViewRow>
+		<Label id="date"/>
+		<Label id="title"/>
+	</TableViewRow>
+</Alloy>
