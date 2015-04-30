@@ -6,7 +6,7 @@
 } 
 
 "#lintro": {
-    height: '65dp',
+    height: '60dp',
     width: '68dp',
     left: '5dp',
     top: '3dp',
@@ -30,7 +30,7 @@
 }
 
 "#times": {
-    bottom: '30dp',
+    bottom: '10dp',
     font: {
         fontSize: '14dp'
     },
