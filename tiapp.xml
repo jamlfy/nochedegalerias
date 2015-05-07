@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
-	<id>co.unmundofeliz.nochegalerias</id>
+	<id>co.unmundofeliz.nochedegalerias</id>
 	<name>Noche de Galerias</name>
-	<version>3</version>
+	<version>4</version>
 	<publisher>AlejoNext</publisher>
 	<url>https://alejonext.co/nochedegalerias</url>
 	<description>Noche de Galería es la aplicación que te ayuda a estar actualizado en el tema del arte, pues es una única app que te informa todos los eventos referentes al Arte.</description>
@@ -38,6 +38,7 @@
 		</plist>
 	</ios>
 	<android xmlns:android="http://schemas.android.com/apk/res/android">
+		<manifest android:versionCode="4" android:versionName="1.0.4"/>
 		<activity
 			android:screenOrientation="portrait"
 			android:configChanges="keyboardHidden|orientation"
