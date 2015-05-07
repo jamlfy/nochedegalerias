@@ -59,24 +59,9 @@
         <target device="blackberry">true</target>
         <target device="mobileweb">true</target>
     </deployment-targets>
+    <!-- 4.0.0.RC2 - 3.5.1.GA -->
     <sdk-version>3.5.1.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
-    <property name="acs-api-key-development" type="string">CHnoUiYeuNWHrmchWXzFNfboYjHMNI3o</property>
-    <property name="acs-api-key-production" type="string">g5l6oqK4AJ0DJj12Lprvgu7IZz9xcfrE</property>
-    <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
-    <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
-    <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-key-development" type="string">isJ1n0qyyx56VfoWCli8o2T7jUg2expm</property>
-    <property name="acs-oauth-key-production" type="string">ed93IJWzMCMsHxDuIhxfGfHUkMHFz3tu</property>
-    <property name="acs-oauth-secret-development" type="string">GZaOc0nsNtxJYZQLMjXEYkAKz95bCWGW</property>
-    <property name="acs-oauth-secret-production" type="string">J0fXIONP1kF0UEA92M0J40kK8hmrpPYb</property>
-    <property name="acs-password-development" type="string">IhZrSpFCy5kxXiXlNn</property>
-    <property name="acs-password-production" type="string">uwtFJelL7WrDvqDSLc</property>
-    <property name="acs-username-development" type="string">appc_app_user_dev</property>
-    <property name="acs-username-production" type="string">appc_app_user</property>
-    <property name="appc-creator-user-id" type="string">2907b883-321c-420c-99d2-00c539bbf418</property>
-    <property name="appc-org-id" type="number">100012871</property>
 </ti:app>
