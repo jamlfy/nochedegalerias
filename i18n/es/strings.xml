@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="past">Pasados</string>
+	<string name="now">Esta semana</string>
+	<string name="future">Siguientes</string>
+	<string name="feed">Reclamos y demas</string>
+	<string name="share">Compatir</string>
+	<string name="geo">Geolocalizar</string>
+	<string name="app">Noche de Galerias</string>
+	<string name="loading">Cargando...</string>
+</resources>
+

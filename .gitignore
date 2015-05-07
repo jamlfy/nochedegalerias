@@ -1,4 +1,5 @@
 **/config.json
+tns/lib
 *.log
 *.pid
 *.seed

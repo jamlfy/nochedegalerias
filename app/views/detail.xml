@@ -1,18 +1,24 @@
 <Alloy>
-	<Window>
+	<Window id="win">
 		<Menu platform="android">
-			<MenuItem id="share" />
-			<MenuItem id="geo" />
+			<MenuItem id="share" onClick="share" />
+			<MenuItem id="geo" onClick="geo"/>
 		</Menu>
 
 		<RightNavButton platform="ios,mobileweb">
-			<Button id="refreshButton" onClick="geo()" />
+			<Button id="geo" onClick="geo" />
 		</RightNavButton>
 
-		<Label id="date"/>
-		<Label id="title"/>
-		<Label id="local"/>
+		<View id="tops">
+			<View id="lintro">
+				<Label id="date"/>
+				<Label id="times"/>
+			</View>
+			<View id="lmax">
+				<Label id="titles"/>
+			</View>
+		</View>
 
-		<Widget src="com.alcoapps.viewmarkdown" id="text"/>
+		<Widget src="com.alcoapps.viewmarkdown" id="texts"/>
 	</Window>
 </Alloy>

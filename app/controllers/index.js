@@ -25,9 +25,8 @@ $.master.on('detail', function(e) {
 	// get the detail controller and window references
 	var controller = isIpad ? $.detail : Alloy.createController('detail');
 	var win = controller.getView();
-
 	// set the new detail article
-	controller.setEvent(e.row);
+	controller.setEvent(e.row.ext);
 
 	// open the detail windows
 	if (usesNavGroup) {

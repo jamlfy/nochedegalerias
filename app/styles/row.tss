@@ -1,53 +1,55 @@
-
 "#row": {
 	height: '70dp',
-    className: 'itemRow',
-    hasChild: true
-} 
+	//className: 'itemRow',
+	hasChild: true,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
 
 "#lintro": {
-    height: '60dp',
-    width: '68dp',
-    left: '5dp',
-    top: '3dp',
-    touchEnabled: false
+	height: '60dp',
+	width: '68dp',
+	left: '5dp',
+	top: '3dp',
+	touchEnabled: false
 }
 
 "#lmax": {
-    top: '-10dp',
-    height: '70dp',
-    left: '83dp',
-    right: '3dp',
-    touchEnabled: false,
-    textAlign: 'left'
+	top: '-10dp',
+	height: '70dp',
+	left: '83dp',
+	right: '3dp',
+	touchEnabled: false,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
 }
 
 "#date": {
-    font: {
-        fontSize: '20dp'
-    },
-    textAlign: 'center'
+	font: {
+		fontSize: '20dp'
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
 
 "#times": {
-    bottom: '5dp',
-    font: {
-        fontSize: '14dp'
-    },
-    textAlign: 'center'
+	bottom: '5dp',
+	font: {
+		fontSize: '14dp'
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
 
 "#title": {
-    font: {
-        fontSize: '14dp'
-    },
-    textAlign: 'left'
+	font: {
+		fontSize: '14dp'
+	},
+	width: Ti.UI.FILL,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
 }
 
 "#local": {
-    bottom: '3dp',
-    font: {
-        fontSize: '12dp'
-    },
-    textAlign: 'left'
+	font: {
+		fontSize: '12dp'
+	},
+	bottom: '3dp',
+	width: Ti.UI.FILL,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
 }

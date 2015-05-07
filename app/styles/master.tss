@@ -1,0 +1,39 @@
+"#maste" : {
+	textid : L('app')
+}
+
+"#activityIndicator" : {
+	message : L('loading')
+}
+
+"#past[platform=ios,mobileweb]" : {
+	textid : L('past')
+}
+
+"#now[platform=ios,mobileweb]":{
+	textid : L('now')
+}
+
+"#future[platform=ios,mobileweb]":{
+	textid : L('future')
+}
+
+"#feed[platform=ios,mobileweb]":{
+	textid : L('feed')
+}
+
+"#past[platform=android]":{
+	title : L('past')
+}
+
+"#now[platform=android]":{
+	title : L('now')
+}
+
+"#future[platform=android]":{
+	title : L('future')
+}
+
+"#feed[platform=android]":{
+	title : L('feed')
+}

@@ -1,5 +1,8 @@
 <Alloy>
-	<Window title="Noche de Galerias">
+	<Window id="mast" >
+
+		<ActivityIndicator id="activityIndicator" message="Loading..."/>
+
 		<!-- android menu -->
 		<Menu platform="android">
 			<MenuItem id="past" />
@@ -8,24 +11,20 @@
 			<MenuItem id="feed" />
 		</Menu>
 
-		<!-- rightNavButton for platforms that support them onClick="openDialog" -->
+		<!-- rightNavButton for platforms that support them  -->
 		<RightNavButton platform="ios,mobileweb">
-			<Button id="refreshButton"  />
+			<Button id="refreshButton" onClick="openDialog" />
 		</RightNavButton>
 		<OptionDialog id="menus" destructive="3" cancel="2" platform="ios,mobileweb">
 			<Options>
-				<Option>option 1</Option>
-				<Option>option 2</Option>
-				<Option>cancel</Option>
-				<Option>destructive</Option>
+				<Option id="past"></Option>
+				<Option id="now"></Option>
+				<Option id="future"></Option>
+				<Option id="feed"></Option>
 			</Options>
 		</OptionDialog>
 
 		<!-- tableview representing all master rows -->
-		<TableView id="table" onClick="openDetail">
-			<HeaderView platform="android">
-				<Label id="header">Las exposiciones</Label>
-			</HeaderView>
-		</TableView>
+		<TableView id="table" onClick="openDetail"/>
 	</Window>
 </Alloy>
