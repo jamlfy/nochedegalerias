@@ -8,4 +8,6 @@
 // accessible globally by attaching them to the `Alloy.Globals`
 // object. For example:
 //
-// Alloy.Globals.someGlobalFunction = function(){};
+Alloy.Globals.moment = require('alloy/moment');
+require('alloy/moment/lang/es');
+Alloy.Globals.moment.lang(Alloy.CFG.LANG);

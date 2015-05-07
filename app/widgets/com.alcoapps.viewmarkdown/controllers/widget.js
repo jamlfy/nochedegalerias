@@ -22,7 +22,7 @@ function fileExists(filePath){
 
 function setMarkDown(m){
 	// read files
-	var htmlTemplate 	= loadFile(Ti.Filesystem.resourcesDirectory + WPATH('html_template.html'));
+	var htmlTemplate 	= loadFile(Ti.Filesystem.resourcesDirectory + WPATH('html_template.htm'));
 	var showdown 		= loadFile(Ti.Filesystem.resourcesDirectory + WPATH('showdown.min.txt'));
 	var stylesheet 		= loadFile(Ti.Filesystem.resourcesDirectory + WPATH('bootstrap.min.css'));
 
@@ -41,6 +41,10 @@ function setMarkDown(m){
 
 function setExtraStyles(style){
 	extraStyles = style;
+}
+
+function setPageFromText(md){
+	setMarkDown(md);
 }
 
 function setPageFromFilePath(path){
@@ -65,6 +69,6 @@ function setPageFromURL(url){
 
 //
 exports.setExtraStyles 		= setExtraStyles;
-exports.setPageFromText 	= setMarkDown;
+exports.setPageFromText 	= setPageFromText;
 exports.setPageFromFilePath = setPageFromFilePath;
 exports.setPageFromURL 		= setPageFromURL;

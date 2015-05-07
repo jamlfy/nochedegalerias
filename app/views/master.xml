@@ -1,14 +1,14 @@
 <Alloy>
 	<Window id="mast" >
 
-		<ActivityIndicator id="activityIndicator" message="Loading..."/>
+		<ActivityIndicator id="activityIndicator" message="Cargando..."/>
 
 		<!-- android menu -->
 		<Menu platform="android">
-			<MenuItem id="past" />
-			<MenuItem id="now" />
-			<MenuItem id="future" />
-			<MenuItem id="feed" />
+			<MenuItem onClick="refreshCal" itemId="0" id="past" />
+			<MenuItem onClick="refreshCal" itemId="1" id="now" />
+			<MenuItem onClick="refreshCal" itemId="2" id="future" />
+			<!-- <MenuItem id="feed" /> -->
 		</Menu>
 
 		<!-- rightNavButton for platforms that support them  -->

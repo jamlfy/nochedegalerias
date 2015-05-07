@@ -1,67 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>co.unmundofeliz.nochegalerias</id>
-    <name>Noche de Galerias</name>
-    <version>1.0</version>
-    <publisher>AlejoNext</publisher>
-    <url>https://unmundofeliz.co</url>
-    <description>Noche de Galerías es la aplicación que te ayuda a estar actualizado en el tema del arte, pues es una única app que te informa todos los eventos referentes al Arte.</description>
-    <copyright>Un Mundo Feliz Inc.</copyright>
-    <icon>appicon.png</icon>
-    <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
-    <analytics>true</analytics>
-    <guid>fe3555a7-dea9-4852-9555-7893597cf601</guid>
-    <property name="ti.ui.defaultunit" type="string">dp</property>
-    <ios>
-        <plist>
-            <dict>
-                <key>UISupportedInterfaceOrientations~iphone</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                </array>
-                <key>UISupportedInterfaceOrientations~ipad</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
-                    <string>UIInterfaceOrientationLandscapeLeft</string>
-                    <string>UIInterfaceOrientationLandscapeRight</string>
-                </array>
-                <key>UIRequiresPersistentWiFi</key>
-                <false/>
-                <key>UIPrerenderedIcon</key>
-                <false/>
-                <key>UIStatusBarHidden</key>
-                <false/>
-                <key>UIStatusBarStyle</key>
-                <string>UIStatusBarStyleDefault</string>
-            </dict>
-        </plist>
-    </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest>
-            <uses-permission android:name="android.permission.INTERNET"/>
-            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-        </manifest>
-    </android>
-    <mobileweb>
-        <precache/>
-        <splash>
-            <enabled>true</enabled>
-            <inline-css-images>true</inline-css-images>
-        </splash>
-        <theme>default</theme>
-    </mobileweb>
-    <modules/>
-    <deployment-targets>
-        <target device="android">true</target>
-        <target device="blackberry">true</target>
-        <target device="mobileweb">true</target>
-    </deployment-targets>
-    <!-- 4.0.0.RC2 - 3.5.1.GA -->
-    <sdk-version>3.5.1.GA</sdk-version>
-    <plugins>
-        <plugin version="1.0">ti.alloy</plugin>
-    </plugins>
+<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
+	<id>co.unmundofeliz.nochegalerias</id>
+	<name>Noche de Galerias</name>
+	<version>3</version>
+	<publisher>AlejoNext</publisher>
+	<url>https://alejonext.co/nochedegalerias</url>
+	<description>Noche de Galería es la aplicación que te ayuda a estar actualizado en el tema del arte, pues es una única app que te informa todos los eventos referentes al Arte.</description>
+	<copyright>Un Mundo Feliz Inc.</copyright>
+	<icon>appicon.png</icon>
+	<fullscreen>false</fullscreen>
+	<navbar-hidden>false</navbar-hidden>
+	<analytics>true</analytics>
+	<guid>533f9e16-7b6d-4a5a-8529-54ce5899bff2</guid>
+	<property name="ti.ui.defaultunit" type="string">dp</property>
+	<ios>
+		<plist>
+			<dict>
+				<key>UISupportedInterfaceOrientations~iphone</key>
+				<array>
+					<string>UIInterfaceOrientationPortrait</string>
+				</array>
+				<key>UISupportedInterfaceOrientations~ipad</key>
+				<array>
+					<string>UIInterfaceOrientationPortrait</string>
+					<string>UIInterfaceOrientationPortraitUpsideDown</string>
+					<string>UIInterfaceOrientationLandscapeLeft</string>
+					<string>UIInterfaceOrientationLandscapeRight</string>
+				</array>
+				<key>UIRequiresPersistentWiFi</key>
+				<false/>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+				<key>UIStatusBarHidden</key>
+				<false/>
+				<key>UIStatusBarStyle</key>
+				<string>UIStatusBarStyleDefault</string>
+			</dict>
+		</plist>
+	</ios>
+	<android xmlns:android="http://schemas.android.com/apk/res/android">
+		<activity
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden|orientation"
+			android:launchMode="singleTask"
+			android:name="ti.modules.titanium.map.TiMapActivity"/>
+	</android>
+	<mobileweb>
+		<precache>
+		</precache>
+		<splash>
+			<enabled>true</enabled>
+			<inline-css-images>true</inline-css-images>
+		</splash>
+		<theme>default</theme>
+	</mobileweb>
+	<modules>
+		<module device="android">ti.admob</module>
+	</modules>
+	<deployment-targets>
+		<target device="android">true</target>
+		<target device="blackberry">true</target>
+		<target device="mobileweb">true</target>
+	</deployment-targets>
+	<sdk-version>3.5.1.GA</sdk-version>
+	<plugins>
+		<plugin version="1.0">ti.alloy</plugin>
+	</plugins>
 </ti:app>

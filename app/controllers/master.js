@@ -1,28 +1,35 @@
-var cal = require('cal');
-var Admob = require('ti.admob');
+const cal = require('cal');
+const Admob = require('ti.admob');
+var code = Admob.isGooglePlayServicesAvailable(),
+	adMobView;
 
-var adMobView = Admob.createAdMobView({
-	publisherId : Alloy.CFG.publisherId,
-	testing : false, // default is false
-	top : 0, //optional
-});
+if (code == Admob.SUCCESS)
+	$.mast.add(Admob.createView(Alloy.CFG.ADMOB));
 
 // open detail window
 function openDetail(e) {
 	$.trigger('detail', e);
 }
 
-function refreshCal(id) {
-	console.log(id);
-	var id = id || 'past';
-	cal.load(id, function (err, data) {
-		console.log('list', data.length);
-		var rows = [];
-		_.each(data, function(item) {
-			rows.push(Alloy.createController('row', item).getView());
-		});
-		$.activityIndicator.hide();
-		$.table.setData(rows);
+function refreshCal(e) {
+	var isId = 'now';
+
+	if(e && e.itemId)
+		isId = cal.listAct[ e.itemId ];
+
+	cal.load(isId, function (err, data) {
+		if(err){
+			console.error(err);
+			alert(err.toString());
+		} else {
+			var rows = [];
+			$.table.setData(rows);
+			_.each(data, function(item) {
+				rows.push(Alloy.createController('row', item).getView());
+			});
+			$.activityIndicator.hide();
+			$.table.setData(rows);
+		}
 	});
 }
 
@@ -34,6 +41,4 @@ if( Ti.Platform.osname != 'android' && $.menus ){
 }
 
 refreshCal();
-
-$.mast.add(adMobView);
 $.activityIndicator.show();

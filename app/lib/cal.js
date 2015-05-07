@@ -1,6 +1,5 @@
-var moment = require('alloy/moment');
 var t = 0,
-	now = moment(),
+	now = Alloy.Globals.moment(),
 	runs = {
 	now : function () {
 		var IS = now.startOf(Alloy.CFG.TIME),
@@ -21,6 +20,7 @@ var t = 0,
 		return Alloy.CFG.URI + Alloy.CFG.NAME + '/' + id;
 	}
 };
+exports.listAct = [ 'past', 'now', 'future' ];
 
 exports.load = function(name, callback) {
 	var xhr = Titanium.Network.createHTTPClient(),
@@ -34,7 +34,7 @@ exports.load = function(name, callback) {
 
 		if (!xml) {
 			if( t > 3)
-				return callback(new Error('No Exist data'));
+				return callback(new Error('No Exist data'), []);
 
 			t++;
 			return exports.load(name, callback);
@@ -45,7 +45,7 @@ exports.load = function(name, callback) {
 			if(jzon.error)
 				error = new Error(jzon.error);
 
-			callback(error, jzon.events);
+			callback(error, jzon.events || []);
 		}catch(e){
 			callback(e);
 		}
