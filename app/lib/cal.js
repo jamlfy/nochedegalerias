@@ -1,25 +1,21 @@
 var t = 0,
-	now = Alloy.Globals.moment(),
+	IS = Alloy.Globals.moment().startOf(Alloy.CFG.TIME),
+	FS = Alloy.Globals.moment().endOf(Alloy.CFG.TIME),
 	runs = {
 	now : function () {
-		var IS = now.startOf(Alloy.CFG.TIME),
-			FS = now.endOf(Alloy.CFG.TIME);
-		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?start[$gte]=' + IS.toJSON() + '&start[$lte]=' + FS.toJSON();
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?public=true&start[$gte]=' + IS.toJSON() + '&start[$lte]=' + FS.toJSON();
 	},
 	past : function () {
-		var IS = now.startOf(Alloy.CFG.TIME),
-			FS = now.endOf(Alloy.CFG.TIME);
-
-		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?end[$lte]=' + FS.toJSON(); //+ '&start[$lte]=' + IS.toJSON();
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?public=true&end[$lte]=' + FS.toJSON() + '&start[$gte]=' + IS.toJSON();
 	},
 	future : function () {
-		var FS = now.endOf(Alloy.CFG.TIME);
-		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?start[$gte]=' + FS.toJSON();
+		return Alloy.CFG.URI + Alloy.CFG.NAME + '/get?public=true&start[$gte]=' + FS.toJSON();
 	},
 	id : function (id) {
 		return Alloy.CFG.URI + Alloy.CFG.NAME + '/' + id;
 	}
 };
+
 exports.listAct = [ 'past', 'now', 'future' ];
 
 exports.load = function(name, callback) {

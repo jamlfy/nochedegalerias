@@ -1,7 +1,3 @@
-"#maste" : {
-	textid : L('app')
-}
-
 "#activityIndicator" : {
 	message : L('loading')
 }

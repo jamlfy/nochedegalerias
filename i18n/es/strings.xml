@@ -8,5 +8,5 @@
 	<string name="geo">Geolocalizar</string>
 	<string name="app">Noche de Galerias</string>
 	<string name="loading">Cargando...</string>
+	<string name="textshare">%1$s en %2$s #NocheDeGalerias https://play.google.com/store/apps/details?id=co.unmundofeliz.nochedegalerias</string>
 </resources>
-

@@ -6,28 +6,26 @@ var code = Admob.isGooglePlayServicesAvailable(),
 if (code == Admob.SUCCESS)
 	adMobView = Admob.createView(Alloy.CFG.ADMOB);
 
-
 function geo () {
 	if( Ti.Platform.osname == 'android' ){
-		// you can also choose to place a point like so
-		var latitude = 0; // set this
-		var longitude = 0; // set this
+		var la = 0; // set this
 		var intent = Ti.Android.createIntent({
 			action: Ti.Android.ACTION_VIEW,
-			data:'geo:'+ latitude + "," + longitude + '?q=bogota,'+ $.titles.text
+			data:'geo:'+ la + ',' + la + '?q=bogota,'+ $.titles.text
 		});
 		Ti.Android.currentActivity.startActivity(intent);
 	} else {
-		Ti.Platform.openURL("http://maps.google.com/maps?saddr=39.9034,116.3702&daddr=39.9344,116.4123");
+		Ti.Platform.openURL('http://maps.google.com/maps?saddr=39.9034,116.3702&daddr=39.9344,116.4123');
 	}
 }
 
 function share () {
 	Social.share({
-		status : $.win.title + ' en ' + $.titles.text + Alloy.CFG.URLDOWNLOAD,
-		androidDialogTitle : 'Compatir!'
+		status :String.format( L('textshare'), $.win.title, $.titles.text ),
+		androidDialogTitle : L('share')
 	});
 }
+
 exports.setEvent = function (data) {
 	$.texts.setPageFromText(data.descrip);
 	$.date.text = Alloy.Globals.moment(data.start).format(Alloy.CFG.FORMAT1);
